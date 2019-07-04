@@ -8,23 +8,17 @@ $ cp -r ~/Old/Directory/. ~/Pictures/Wallpapers/
 ```
 Clone repository.
 ```
-$ git clone ssh://git@github.com/<user>/<repository name>.git
-```
-In `config.py` specify how many monitors and workspaces you use.
-You can check it by running:
-```
-$ xfconf-query --channel xfce4-desktop --list
+$ git clone https://github.com/red-panda-is-here/xface-background-image-rotator.git
+$ cd xface-background-image-rotator/
 ```
 Add execute permissions to the file which will be called from crontab.
 ```
 $ chmod +x rotate_desktop_images.sh
 ```
-Open crontab.
+Open crontab and add new row.
 ```
 $ sudo vim /etc/crontab
-```
-Add to crontab next line(if you want to change images every 30 mins).
-```
+
 30 * * * * username /path/to/project/xface-background-image-rotator/rotate_desktop_images.sh
 
 ```
